@@ -5,6 +5,17 @@ from atm.core import logger
 from atm.conf import settings
 
 
+# 用户登录认证装饰器
+def login_required(func):
+    def wrapper(*args, **kwargs):
+        if args[0]['is_authenticated']:
+            return func(*args, **kwargs)
+        else:
+            exit("User is not authenticated")
+
+    return wrapper
+
+
 def acc_auth(account, password):
     """
     账户认证
