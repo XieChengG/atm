@@ -98,6 +98,7 @@ def logout(acc_data):
     :param acc_data:
     :return:
     """
+    pass
 
 
 def interactive(acc_data):
