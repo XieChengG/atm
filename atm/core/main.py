@@ -1,8 +1,8 @@
-from atm.core import auth
-from atm.core import accounts
-from atm.core import logger
-from atm.core import transaction
-from auth import login_required
+from core import auth
+from core import accounts
+from core import logger
+from core import transaction
+from core.auth import login_required
 
 import time
 
@@ -19,7 +19,7 @@ user_data = {
 
 
 def account_info(acc_data):
-    print(user_data)
+    print(acc_data)
 
 
 @login_required

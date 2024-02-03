@@ -1,6 +1,6 @@
 import os
 import sys
-from atm.core import main
+from core import main
 
 base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(base_dir)

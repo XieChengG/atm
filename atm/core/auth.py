@@ -1,8 +1,8 @@
 import time
 
-from atm.core import db_handler
-from atm.core import logger
-from atm.conf import settings
+from core import db_handler
+from core import logger
+from conf import settings
 
 
 # 用户登录认证装饰器
@@ -37,6 +37,7 @@ def acc_auth(account, password):
 
 
 def acc_login(user_data, log_obj):
+    account = ""
     retry_count = 0
     while user_data['is_authenticated'] is not True and retry_count < 3:
         account = input("account:").strip()

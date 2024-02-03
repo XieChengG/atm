@@ -1,6 +1,6 @@
 import logging
 
-from atm.conf import settings
+from conf import settings
 
 
 def logger(log_type):

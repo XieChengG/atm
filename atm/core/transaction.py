@@ -1,6 +1,6 @@
-from atm.conf import settings
-from atm.core import accounts
-from atm.core import logger
+from conf import settings
+from core import accounts
+from core import logger
 
 
 def make_transaction(log_obj, account_data, tran_type, amount, **others):

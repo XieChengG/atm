@@ -4,7 +4,7 @@ import json
 import os
 import time
 
-from atm.conf import settings
+from conf import settings
 
 
 def file_db_handle(conn_params):

@@ -1,7 +1,7 @@
 import json
 import time
 
-from atm.core import db_handler
+from core import db_handler
 
 
 def load_current_balance(account_id):
