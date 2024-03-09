@@ -41,11 +41,10 @@ def repay(acc_data):
             new_balance = transaction.make_transaction(trans_logger, account_data, 'repay', repay_amount)
             if new_balance:
                 print("New balance: %s" % new_balance['balance'])
+        elif repay_amount == 'b':
+            back_flag = True
         else:
             print("[%s] is not valid amount, only accept integer!" % repay_amount)
-
-        if repay_amount == 'b':
-            back_flag = True
 
 
 def withdraw(acc_data):
@@ -67,11 +66,10 @@ def withdraw(acc_data):
             new_balance = transaction.make_transaction(trans_logger, account_data, 'withdraw', withdraw_amount)
             if new_balance:
                 print("New balance: %s" % new_balance['balance'])
+        elif withdraw_amount == 'b':
+            back_flag = True
         else:
             print("[%s] is not valid amount, only accept integer!" % withdraw_amount)
-
-        if withdraw_amount == 'b':
-            back_flag = True
 
 
 def transfer(acc_data):
