@@ -10,6 +10,8 @@ import time
 trans_logger = logger.logger('transaction')
 access_logger = logger.logger('access')
 
+exit_flat = False
+
 # 临时账户数据
 user_data = {
     'account_id': None,
@@ -78,7 +80,24 @@ def transfer(acc_data):
     :param acc_data:
     :return:
     """
-    pass
+    account_data = accounts.load_current_balance(acc_data['account_id'])
+    current_balance = """--------Balance Info--------
+            Credit: %s
+            Balance: %s""" % (account_data['credit'], account_data['balance'])
+    print(current_balance)
+    back_flag = False
+    while not back_flag:
+        transfer_amount = input("Input transfer amount:").strip()
+        if len(transfer_amount) > 0 and transfer_amount.isdigit():
+            data = transaction.make_transaction(trans_logger, account_data, 'transfer', transfer_amount)
+            if data:
+                print("New balance after transfer: %s" % data['balance'])
+            else:
+                print("Transfer Failed!")
+        elif transfer_amount == 'b':
+            back_flag = True
+        else:
+            print("[%s] is not invalid amount, only accept integer!" % transfer_amount)
 
 
 def pay_check(acc_data):
@@ -96,7 +115,9 @@ def logout(acc_data):
     :param acc_data:
     :return:
     """
-    pass
+    global exit_flat
+    exit_flat = True
+    return exit_flat
 
 
 def interactive(acc_data):
@@ -125,6 +146,7 @@ def interactive(acc_data):
         '6': logout
     }
 
+    global exit_flat
     exit_flat = False
     while not exit_flat:
         print(menu)

@@ -1,3 +1,9 @@
 Sat 03 Feb 2024 20:29:18 - transaction - INFO - account:1234 action:repay amount:500.0 interest:0.0
 Sat 09 Mar 2024 11:31:52 - transaction - INFO - account:1234 action:repay amount:100.0 interest:0.0
 Sat 09 Mar 2024 11:40:22 - transaction - INFO - account:1234 action:repay amount:100.0 interest:0.0
+Sat 09 Mar 2024 14:58:22 - transaction - INFO - account:1234 action:transfer amount:300.0 interest:15.0
+Sat 09 Mar 2024 17:00:00 - transaction - INFO - account:1234 action:withdraw amount:100.0 interest:5.0
+Sat 09 Mar 2024 17:01:56 - transaction - INFO - account:1234 action:repay amount:300.0 interest:0.0
+Sat 09 Mar 2024 17:06:21 - transaction - INFO - account:1234 action:repay amount:300.0 interest:0.0
+Sat 09 Mar 2024 17:06:42 - transaction - INFO - account:1234 action:transfer amount:200.0 interest:10.0
+Sat 09 Mar 2024 17:07:12 - transaction - INFO - account:1234 action:withdraw amount:200.0 interest:10.0
