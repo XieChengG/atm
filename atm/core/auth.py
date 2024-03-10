@@ -37,7 +37,6 @@ def acc_auth(account, password):
 
 
 def acc_login(user_data, log_obj):
-    account = ""
     retry_count = 0
     while user_data['is_authenticated'] is not True and retry_count < 3:
         account = input("account:").strip()

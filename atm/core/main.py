@@ -106,7 +106,16 @@ def pay_check(acc_data):
     :param acc_data:
     :return:
     """
-    pass
+    account_data = acc_data['account_data']
+    bill_info = """--------Bill Info--------
+        Credit: {credit}
+        Balance: {balance}
+        Enroll_date: {enroll_date}
+        Expire_date: {expire_date}
+        Pay_day: {pay_day}"""
+    print(bill_info.format(credit=account_data['credit'], balance=account_data['balance'],
+                           enroll_date=account_data['enroll_date'], expire_date=account_data['expire_date'],
+                           pay_day=account_data['pay_day']))
 
 
 def logout(acc_data):
